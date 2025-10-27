@@ -7,13 +7,13 @@
         $telefone = $_POST['telefone'];
         $data_reserva = $_POST['data_reserva'];
 
-        $stmt = $pdo->prepare("INSERT INTO cliente (nome, CPF, telefone) VALUES (?,?,?)");
-        $stmt->execute([$nome, $CPF, $telefone]);
+        $query_1 = $pdo->prepare("INSERT INTO cliente (nome, CPF, telefone) VALUES (?,?,?)");
+        $query_1->execute([$nome, $CPF, $telefone]);
         
-        $id_cliente = $pdo->lastInsertId();
+        $id_cliente = $pdo->lastInsertId(); // Comando para resgatar o último id do cliente usado para fazer o primeiro insert. Vamos usar ele para fazer a segunda query abaixo na tabela de reserva
 
-        $stmt2 = $pdo->prepare("INSERT INTO reserva (id_cliente, data_reserva) VALUES (?,?)");
-        $stmt2->execute([$id_cliente, $data_reserva]);
+        $query_2 = $pdo->prepare("INSERT INTO reserva (id_cliente, data_reserva) VALUES (?,?)");
+        $query_2->execute([$id_cliente, $data_reserva]);
 
         echo "Olá $nome ! Seu CPF: $CPF e seu telefone: $telefone, foram cadastrados com sucesso e sua reserva é para o dia $data_reserva <br>";
         echo "<button><a href='cadastra_cliente.php'>Voltar</a></button>";
