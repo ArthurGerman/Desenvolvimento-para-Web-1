@@ -32,7 +32,7 @@
 
         <ul>
             <li>
-                <a href="../php/lista_carros.php">Voltar</a>
+                <a href="../index.php">Voltar</a>
             </li>
         </ul>
     </header>
