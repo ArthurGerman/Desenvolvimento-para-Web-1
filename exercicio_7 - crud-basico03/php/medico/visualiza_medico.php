@@ -46,7 +46,7 @@
                 <td><?= $medico['ESPECIALIDADE'] ?></td>
 
                 <td><a href="./edita_medico.php?id=<?= $medico['ID']?>">Editar</a></td>
-                <td><a href="./exclui_medico.php?id=">Excluir</a></td>
+                <td><a href="./exclui_medico.php?id=<?= $medico['ID']?>">Excluir</a></td>
             </tr>
         </tbody>
     </table>

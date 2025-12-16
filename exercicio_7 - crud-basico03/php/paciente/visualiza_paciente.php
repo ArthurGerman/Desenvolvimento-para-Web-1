@@ -48,7 +48,7 @@
                 <td><?= $paciente['TIPO_SANGUINEO'] ?></td>
 
                 <td><a href="./edita_paciente.php?id=<?= $paciente['ID']?>">Editar</a></td>
-                <td><a href="./exclui_paciente.php?id=">Excluir</a></td>
+                <td><a href="./exclui_paciente.php?id=<?= $paciente['ID']?>">Excluir</a></td>
             </tr>
         </tbody>
     </table>
