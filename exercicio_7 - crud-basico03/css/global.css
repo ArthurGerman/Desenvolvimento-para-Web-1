@@ -1,0 +1,34 @@
+body{
+    background-color: gainsboro;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+a:hover{
+    color:blue;
+}
+table{
+    margin-left: 20px;
+}
+td{
+    padding: 5px;
+}
+li{
+    margin-left: 30px;
+}
+
+
+label{
+    margin-left: 15px;
+}
+input, select, textarea{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 35px;
+}
+.observacao{
+    height: 100px;
+    width: 250px;
+}

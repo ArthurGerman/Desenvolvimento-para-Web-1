@@ -6,9 +6,6 @@
         echo "Para a altura de $altura e peso $peso, seu IMC é $resultado"; 
 
     }else if ($_SERVER['REQUEST_METHOD'] == 'GET'){
-        $a = $_GET['a'];
-        $b = $_GET['num_b'];
-        $resultado = $a + $b;
-        echo "Soma de $a com $b é $resultado";   
+        echo "Não usou método POST";   
     }
 ?>
