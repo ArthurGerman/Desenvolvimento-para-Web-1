@@ -9,7 +9,7 @@
             PACIENTE.NOME,
             PACIENTE.DATA_NASCIMENTO,
             PACIENTE.TIPO_SANGUINEO,
-            IMAGEM.PATH AS IMAGEM
+            IMAGEM.PATH
 
         FROM PACIENTE
         LEFT JOIN IMAGEM ON PACIENTE.ID_IMAGEM = IMAGEM.ID
@@ -58,8 +58,8 @@
                 <td><?= $paciente['DATA_NASCIMENTO'] ?></td>
                 <td><?= $paciente['TIPO_SANGUINEO'] ?></td>
                 <td>
-                    <?php if (!empty($paciente['IMAGEM'])): ?>
-                        <img src="../../storage/<?= $paciente['IMAGEM'] ?>" alt="Foto do Paciente" width="200">
+                    <?php if (!empty($paciente['PATH'])): ?>
+                        <img src="../../storage/<?= $paciente['PATH'] ?>" alt="Foto do Paciente" width="200">
                     <?php else: ?>
                         <img src="../../storage/profile.jpg" alt="Sem Foto" width="100">
                     <?php endif; ?>
