@@ -117,6 +117,7 @@
         <?php endif; ?>
 
         <br><br>
+        
 
         <label for="imagem">Atualizar imagem do paciente(opcional): </label>
         <input type="file" id="imagem" name="imagem" accept="image/*"><br>
